@@ -1,0 +1,10 @@
+CodeLibra/Temp/
+CodeLibra/Library/
+CodeLibra/obj/
+CodeLibra/.vs/CodeLibra/v15/.suo
+*.csproj
+*.log
+*.cache
+*.log
+*.ide-wal
+

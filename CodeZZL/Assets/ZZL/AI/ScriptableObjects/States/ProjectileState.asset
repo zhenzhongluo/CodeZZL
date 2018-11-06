@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3720441bd507a4e48946a308929fa8cc, type: 3}
+  m_Name: ProjectileState
+  m_EditorClassIdentifier: 
+  actions:
+  - {fileID: 11400000, guid: 537c88e23a2c5df4da85a2f3266e8dee, type: 2}
+  - {fileID: 11400000, guid: 9648bf67a5fed9d488d0b76dd3fdd32d, type: 2}
+  - {fileID: 11400000, guid: 41eef57d50ed4a94984c277c33763394, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: 08f4d7f932164034091b3952283e2069, type: 2}
+    trueState: {fileID: 11400000, guid: 648a380a8c5f22f4d9fc7452e84d47bc, type: 2}
+    falseState: {fileID: 11400000, guid: c17fb1efb4baea349bbe0e30a338e1f6, type: 2}
+  sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3e282feb649a7f449c8f71e4612821e, type: 3}
+  m_Name: EnemyStats
+  m_EditorClassIdentifier: 
+  spreadRate: 0.03
+  projectileRange: 10
+  projectileRate: 1
+  launchAngleInDegree: 50
+  normalBulletsPerShot: 10
+  projectileBulletsPerShot: 10
+  shootingRange: 8
+  shootingRate: 0.8
+  rotateSpeed: 120
+  jumpSpeed: 0.7
+  moveSpeed: 0.55
+  chaseSpeed: 1
+  lookRange: 20
+  lookSphereCastRadius: 2
+  attackRange: 1
+  attackRate: 1
+  attackForce: 15
+  attackDamage: 50
+  searchDuration: 4
+  searchingTurnSpeed: 120
