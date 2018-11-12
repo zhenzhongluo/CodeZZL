@@ -2994,6 +2994,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5491e551ea47f464297fc642ccc92ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minGroundNormalY: 0.65
+  gravityModifier: 1
+  isMoving: 0
+  facingRight: 0
 --- !u!1 &573569141
 GameObject:
   m_ObjectHideFlags: 0

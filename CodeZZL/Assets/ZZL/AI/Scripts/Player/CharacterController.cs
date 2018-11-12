@@ -42,32 +42,43 @@ public class CharacterController : PhysicsObject
 
         //Debug.Log(move.x);
 
-        
+        //if (move.x == 0)
+        //{
+        //    isMoving = false;
+        //}
+        //else
+        //{
+        //    isMoving = true;
+        //}
 
-        if(Input.GetButtonDown("Jump") && m_grounded)
+        if(isMoving)
+        {
+            m_targetVelocity = move * maxSpeed;
+        }
+
+       // m_animator.SetBool("is_moving", isMoving);
+        m_animator.SetFloat("run_speed", move.x);
+
+        /******** Jump *********/
+        if (Input.GetButtonDown("Jump") && m_grounded)
         {
             // add velocity on the y-axis
             m_velocity.y = jumpTakeOffSpeed;
         }
 
-        else if(Input.GetButtonUp("Jump"))
+        else if (Input.GetButtonUp("Jump"))
         {
-            if(m_velocity.y > 0.0f)
+            if (m_velocity.y > 0.0f)
             {
                 // reduce the velocity by half
                 m_velocity.y = m_velocity.y * 0.5f;
             }
         }
 
-        m_targetVelocity = move * maxSpeed;
-
-        m_animator.SetFloat("run_speed", move.x);
-
-        Debug.Log(m_velocity.y);
+        //Debug.Log(m_velocity.y);
         m_animator.SetFloat("jump_speed", m_velocity.y);
-        
 
     }
 
-    
+
 }

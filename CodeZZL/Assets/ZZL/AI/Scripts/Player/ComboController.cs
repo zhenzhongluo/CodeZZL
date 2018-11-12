@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ComboController : MonoBehaviour
+public class ComboController : PhysicsObject
 {
     private Animator m_animator;
 
@@ -29,7 +29,9 @@ public class ComboController : MonoBehaviour
 
     private void ComboStarter()
     {
-        if(m_canClick)
+        Debug.Log(m_numOfClicks);
+
+        if (m_canClick)
         {
             m_numOfClicks++;
         }
@@ -45,12 +47,17 @@ public class ComboController : MonoBehaviour
     {
         m_canClick = false;
 
+        isMoving = false;
+//        m_animator.SetBool("is_moving", false);
+
         if(m_animator.GetCurrentAnimatorStateInfo(0).IsName("Slash 1") && m_numOfClicks == 1)
         {
             // If the first animation is still playing and only 1 click has happened, return to idle
             m_animator.SetInteger("animation", 0);
             m_canClick = true;
             m_numOfClicks = 0;
+
+            isMoving = true;
         }
 
         else if(m_animator.GetCurrentAnimatorStateInfo(0).IsName("Slash 1") && m_numOfClicks >= 2)
@@ -66,6 +73,8 @@ public class ComboController : MonoBehaviour
             m_animator.SetInteger("animation", 0);
             m_canClick = true;
             m_numOfClicks = 0;
+
+            isMoving = true;
         }
 
         else if(m_animator.GetCurrentAnimatorStateInfo(0).IsName("Slash 2") && m_numOfClicks >= 3)
@@ -77,10 +86,14 @@ public class ComboController : MonoBehaviour
 
         else if(m_animator.GetCurrentAnimatorStateInfo(0).IsName("Thrust 3"))
         {
+            //Debug.Log("Thrust 3");
+
             // Since this is the third and last animation, return to idle
             m_animator.SetInteger("animation", 0);
             m_canClick = true;
             m_numOfClicks = 0;
+
+            isMoving = true;
         }
     }
 }
